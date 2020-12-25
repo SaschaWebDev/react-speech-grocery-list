@@ -2,8 +2,9 @@ import React from "react";
 import { Card, CardHeader, CardContent, Typography } from "@material-ui/core";
 
 import useStyles from "./styles/styles.js";
+import ShoppingCardItem from "./ShoppingCardItem/ShoppingCardItem.js";
 
-const ShoppingCart = () => {
+const ShoppingCart = (props) => {
   const classes = useStyles();
 
   return (
@@ -33,8 +34,14 @@ const ShoppingCart = () => {
         <Typography variant="subtitle1" style={{ lineHeight: "1.5rem" }}>
           Add articles to shopping list by saying them out loud
         </Typography>
+        {props.itemList.map(
+          (item) => (
+            <ShoppingCardItem name={item.name} price={item.price} />
+          )
+          /* console.log("THIS IS ITEM", item) */
+        )}
         <Typography align="center" variant="h5">
-          20 €
+          {props.totalSum} €
         </Typography>
       </CardContent>
     </Card>

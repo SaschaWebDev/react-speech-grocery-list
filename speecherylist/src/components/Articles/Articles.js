@@ -1,7 +1,15 @@
 import React from "react";
-import { Card, CardHeader, CardContent, Typography } from "@material-ui/core";
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  Typography,
+  Grid,
+} from "@material-ui/core";
 
-const Articles = () => {
+import ArticleItem from "./ArticleItem/ArticleItem";
+
+const Articles = (props) => {
   return (
     <Card
       style={{
@@ -25,7 +33,7 @@ const Articles = () => {
         style={{ color: "orange" }}
       />
       <CardContent title="">
-        <Typography align="center" variant="h5">
+        {/* <Typography align="center" variant="h5">
           20 €
         </Typography>
         <Typography
@@ -33,7 +41,18 @@ const Articles = () => {
           style={{ lineHeight: "1.5rem", marginTop: "20px" }}
         >
           Add articles to shopping list by saying them out loud
-        </Typography>
+        </Typography> */}
+        <Grid
+          container
+          spacing={0}
+          alignItems="center"
+          justify="center"
+          style={{ marginTop: "5vh" }}
+        >
+          {props.dbItemList.map((item) => (
+            <ArticleItem name={item.name} price={item.price} />
+          ))}
+        </Grid>
       </CardContent>
     </Card>
   );
