@@ -1,7 +1,8 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 
-import Details from "../components/Details/Details.js";
+import ShoppingCart from "../components/ShoppingCart/ShoppingCart.js";
+import Articles from "../components/Articles/Articles.js";
 
 const Dashboard = () => {
   return (
@@ -13,14 +14,11 @@ const Dashboard = () => {
         justify="center"
         style={{ height: "100vh" }}
       >
-        <Grid item xs={12} sm={4}>
-          <Details />
+        <Grid item xs={5} sm={9}>
+          <Articles />
         </Grid>
-        <Grid item xs={12} sm={4}>
-          {/* <Main /> */}
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <Details />
+        <Grid item xs={5} sm={2}>
+          <ShoppingCart />
         </Grid>
       </Grid>
     </div>

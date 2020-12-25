@@ -61,7 +61,7 @@ const Navbar = () => {
             fontSize: "1.2rem",
           }}
         >
-          Lebensmittel
+          Food
         </div>
         <div
           className="menu-item"
@@ -73,7 +73,7 @@ const Navbar = () => {
             fontSize: "1.2rem",
           }}
         >
-          Haushalt
+          Household
         </div>
         <div
           className="menu-item"
