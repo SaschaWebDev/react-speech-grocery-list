@@ -12,7 +12,16 @@ body {
   background-size: cover;
 }
 
-@media only screen and (max-width: 600px) {
+.menu-item:hover,
+.title:hover,
+.profile:hover,
+.shopping-cart:hover,
+.settings:hover {
+  cursor: pointer;
+  color: orange;
+}
+
+@media only screen and (max-width: 800px) {
   .menu {
     display: none !important;
   }
